@@ -64,13 +64,15 @@ export default function Home() {
           </p>
           
           <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10">
-            <p className="text-xl font-semibold text-white mb-8">
+            <p className="text-xl font-semibold text-white mb-8" id="url-input-description">
               Drop your first link and watch the magic happen ✨
             </p>
             <div className="bg-white rounded-2xl p-2">
               <input 
                 type="url" 
                 placeholder="https://your-awesome-link.com" 
+                aria-label="Enter your URL to create a list"
+                aria-describedby="url-input-description"
                 className="w-full px-8 py-7 text-2xl rounded-xl outline-none border-2 border-transparent focus:border-blue-300 transition-colors"
               />
             </div>
