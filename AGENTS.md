@@ -1,0 +1,1 @@
+Always install `@/components/ui` from the shadcn/ui library using `npm install`.
