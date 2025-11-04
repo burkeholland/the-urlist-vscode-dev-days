@@ -18,7 +18,7 @@ export default function Home() {
 
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-white/20 backdrop-blur-xl bg-white/10">
-        <div className="mx-auto flex h-14 items-center px-4" style={{ maxWidth: 960 }}>
+        <div className="mx-auto max-w-[960px] flex h-14 items-center px-4">
           <div className="mr-6 flex items-center gap-2">
             <div className="w-7 h-7 bg-white text-[#4facfe] rounded-lg flex items-center justify-center font-bold text-sm">U</div>
             <span className="font-semibold tracking-tight text-white">urlist</span>
@@ -54,8 +54,8 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16 flex flex-col items-center justify-center relative z-10" style={{ minHeight: "calc(100vh - 3.5rem)" }}>
-        <div className="text-center max-w-4xl">
+      <div className="mx-auto max-w-[960px] px-4 py-16 flex flex-col justify-center gap-10 relative z-10" style={{ minHeight: "calc(100vh - 3.5rem)" }}>
+        <div className="text-center w-full">
           <h1 className="text-7xl md:text-8xl font-black mb-6 text-white drop-shadow-lg">
             The Urlist
           </h1>
