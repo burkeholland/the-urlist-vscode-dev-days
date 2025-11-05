@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -27,7 +28,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const { data: { user } } = await supabase.auth.getUser();
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-br from-[#4facfe] to-[#00f2fe] relative overflow-hidden`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-br from-[#4facfe] to-[#00f2fe] relative overflow-x-hidden`}>
         {/* Background decorative blobs */}
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
           <div className="absolute top-20 left-20 w-72 h-72 bg-white/20 rounded-full blur-3xl"></div>
@@ -42,10 +43,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <span className="font-semibold tracking-tight text-white">urlist</span>
             </div>
             <nav className="hidden md:flex gap-6 text-sm">
-              <a href="/" className="text-white transition-colors hover:text-white/80">Home</a>
-              <a href="/features" className="text-white/80 transition-colors hover:text-white">Features</a>
-              <a href="/pricing" className="text-white/80 transition-colors hover:text-white">Pricing</a>
-              <a href="/about" className="text-white/80 transition-colors hover:text-white">About</a>
+              <Link href="/" className="text-white transition-colors hover:text-white/80">Home</Link>
+              <Link href="/features" className="text-white/80 transition-colors hover:text-white">Features</Link>
+              <Link href="/pricing" className="text-white/80 transition-colors hover:text-white">Pricing</Link>
+              <Link href="/about" className="text-white/80 transition-colors hover:text-white">About</Link>
             </nav>
             <div className="ml-auto flex items-center gap-2">
               <AuthButtons initialUserEmail={user?.email ?? null} />
@@ -57,10 +58,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 </SheetTrigger>
                 <SheetContent side="left" className="w-64">
                   <nav className="grid gap-4 py-4">
-                    <a href="/" className="text-sm font-medium hover:text-primary">Home</a>
-                    <a href="/features" className="text-sm font-medium hover:text-primary">Features</a>
-                    <a href="/pricing" className="text-sm font-medium hover:text-primary">Pricing</a>
-                    <a href="/about" className="text-sm font-medium hover:text-primary">About</a>
+                    <Link href="/" className="text-sm font-medium hover:text-primary">Home</Link>
+                    <Link href="/features" className="text-sm font-medium hover:text-primary">Features</Link>
+                    <Link href="/pricing" className="text-sm font-medium hover:text-primary">Pricing</Link>
+                    <Link href="/about" className="text-sm font-medium hover:text-primary">About</Link>
                     <AuthButtons initialUserEmail={user?.email ?? null} />
                   </nav>
                 </SheetContent>
